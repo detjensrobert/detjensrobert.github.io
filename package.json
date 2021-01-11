@@ -1,0 +1,21 @@
+{
+  "name": "detjensrobert.github.io",
+  "version": "1.0.0",
+  "description": "static website",
+  "main": "\"\"",
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "start": "npx http-server . --no-dotfiles",
+    "lint": "npx prettier -w ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/detjensrobert/detjensrobert.github.io.git"
+  },
+  "author": "detjensrobert",
+  "license": "MIT",
+  "homepage": "https://github.com/detjensrobert/detjensrobert.github.io"
+}
