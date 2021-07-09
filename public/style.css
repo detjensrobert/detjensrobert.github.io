@@ -9,16 +9,39 @@ body {
 }
 
 .background {
+  /* dim bg image in dark mode */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/public/sky.jpg");
+  background-size: cover;
+  background-position: center;
+
   position: fixed;
   top: 0;
   left: 0;
 
-  object-fit: cover;
-  z-index: -1;
-
-  /* Preserve aspet ratio */
+  /* Preserve aspect ratio */
   width: 100%;
   height: 100%;
+}
+
+/* -- title -- */
+
+.title-container {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  height: 30%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.title-logo {
+  clip-path: circle(closest-side);
+  margin: 30px;
+  max-height: 250px;
+  max-width: 100%;
 }
 
 .title {
@@ -27,11 +50,9 @@ body {
   font-size: 100px;
   font-weight: bold;
   text-shadow: 0 0 10px black;
-
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
 }
+
+/* -- header -- */
 
 .header-link-container {
   display: flex;
@@ -46,7 +67,7 @@ body {
 .header-link {
   margin: 20px;
   color: white;
-  text-shadow: 0 0 7px black;
+  text-shadow: 0 0 10px black;
   text-align: right;
   font-size: 40px;
   font-weight: bold;
@@ -66,4 +87,38 @@ a:hover {
 
 a:active {
   text-decoration: underline;
+}
+
+
+/* -- social links -- */
+
+.social-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 30px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 80px;
+}
+
+/* -- dark theme? -- */
+
+@media (prefers-color-scheme: dark) {
+}
+
+@media (max-width: 1000px) {
+  .title-logo {
+    max-height: 150px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
 }
