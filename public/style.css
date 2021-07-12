@@ -23,35 +23,6 @@ body {
   height: 100%;
 }
 
-/* -- title -- */
-
-.title-container {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
-  height: 30%;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-}
-
-.title-logo {
-  clip-path: circle(closest-side);
-  margin: 30px;
-  max-height: 250px;
-  max-width: 100%;
-}
-
-.title {
-  color: white;
-  text-align: left;
-  font-size: 100px;
-  font-weight: bold;
-  text-shadow: 0 0 10px black;
-}
-
 /* -- header -- */
 
 .header-link-container {
@@ -82,30 +53,69 @@ a:visited {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 20px black;
+  /* text-decoration: underline; */
 }
 
 a:active {
-  text-decoration: underline;
+  text-shadow: 0 0 20px black;
+  /* text-decoration: underline; */
 }
 
+/* -- bottom panel */
+
+.bottom-panel {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+
+  padding: 5%;
+
+  height: 50%;
+}
+
+/* -- title -- */
+
+.title-logo {
+  clip-path: circle(closest-side);
+  max-height: 250px;
+  max-width: 100%;
+}
+
+.title {
+  color: white;
+  text-align: left;
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+
+  margin: 0px 20px;
+
+  flex-grow: 1;
+}
 
 /* -- social links -- */
 
 .social-icon-container {
   display: flex;
   flex-direction: column;
-  align-items: right;
-
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  padding: 30px;
+  align-items: flex-end;
 }
 
 .social-icon {
   color: white;
   font-size: 80px;
+  text-shadow: 0 0 10px black;
+}
+
+.social-icon:hover {
+  text-shadow: 0 0 20px black;
 }
 
 /* -- dark theme? -- */
