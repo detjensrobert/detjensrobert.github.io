@@ -8,19 +8,11 @@ body {
   margin: 0px;
 }
 
-.background {
-  /* dim bg image in dark mode */
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/public/sky.jpg");
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("/public/sky.jpg");
   background-size: cover;
   background-position: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  /* Preserve aspect ratio */
-  width: 100%;
-  height: 100%;
+  background-attachment: fixed;
 }
 
 /* -- header -- */
@@ -102,25 +94,42 @@ a:active {
 
 /* -- social links -- */
 
-.social-icon-container {
+.site-icon-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
 }
 
-.social-icon {
+.site-icon {
   color: white;
   font-size: 80px;
   text-shadow: 0 0 10px black;
 }
 
-.social-icon:hover {
+.site-icon:hover {
   text-shadow: 0 0 20px black;
 }
 
 /* -- dark theme? -- */
 
 @media (prefers-color-scheme: dark) {
+  .background {
+    /* dim bg image in dark mode */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("/public/sky.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspect ratio */
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -131,4 +140,42 @@ a:active {
   .title {
     font-size: 50px;
   }
+}
+
+/* -- content -- */
+
+.content {
+  width: 70%;
+  margin: auto;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* -- header title -- */
+
+.header-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 5% 10%;
+}
+
+.header-logo {
+  clip-path: circle(closest-side);
+  max-height: 120px;
+  max-width: 100%;
+}
+
+.header-title {
+  color: white;
+  text-align: left;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+
+  margin: 0px 20px;
+
+  flex-grow: 1;
 }

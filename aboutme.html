@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detjens Dot Dev</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
+    <script src="https://kit.fontawesome.com/12a0334978.js"></script>
+    <link rel="stylesheet" href="/public/style.css" />
+    <link rel="icon" type="image/png" href="/public/moth.jpg" />
+
+    <!-- markdown to html parser -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header-title-container">
+      <img class="header-logo" src="/public/moth.jpg" alt="logo" />
+      <h1 class="header-title"><a href="/">Robert Detjens</a></h1>
+    </div>
+
+    <div class="content">
+      <zero-md>
+        <script type="text/markdown" data-dedent>
+          # About Me
+
+          Hello!
+
+          ## Current Employment
+
+          My current job is working at the [OSU Open Source Lab](https://osuosl.org) as a Student Systems Engineer. We
+          maintain a network of servers that host open source projects, including numerous Linux distribution mirrors,
+          virtual machine hosting, and mailing lists.
+
+          Most of this job is maintaining our configuration management software, responding to and implementing changes
+          from customer support tickets, and contributing to upstream OSS projects.
+
+          |                  |      |      |           |        |         |         |        |                             |
+          | ---------------- | ---- | ---- | --------- | ------ | ------- | ------- | ------ | --------------------------- |
+          | **Skills used:** | Chef | Ruby | Openstack | Apache | Jenkins | HAProxy | Docker | Git feature-branch workflow |
+
+          ## Github Contributions
+
+          See all of my contributions [here](https://github.com/pulls?page=4&q=is%3Apr+author%3Adetjensrobert)! Some
+          notable ones are listed below:
+
+          ### Sous Chefs
+
+          I actively contribute to open source projects on Github, mainly in the [Sous Chefs](https://sous-chefs.org)
+          community, helping to maintain community-supported [Chef](https://chef.io) configuration management cookbooks.
+
+          Notable contributions here include:
+
+          - Refactoring the [`chef-acme`](https://github.com/schubergphilis/chef-acme/pull/128),
+            [`composer`](https://github.com/djoos-cookbooks/composer/pull/81), and
+            [`yumgroup`](https://github.com/mmmorris1975/yumgroup/pull/6) cookbooks to modern tooling and conventions
+          - [Merging duplicated resources](https://github.com/sous-chefs/selinux/pull/79) from `selinux-policy` into the
+            `selinux` cookbook
+
+          ### Discord Bots
+
+          I have created and worked on several Discord bots in various languages:
+
+          - Created [The Bishop](https://github.com/detjensrobert/the-bishop) for the largest Computer Science help
+            server at OSU
+
+          - Contributed to the [OSUSEC Discord Bot](https://gitlab.com/osusec/discord-bot/) for the OSU Security Club,
+            including a [command-bot refactor](https://gitlab.com/osusec/discord-bot/-/merge_requests/28) and [on-demand
+            AWS instance creation](https://gitlab.com/osusec/discord-bot/-/merge_requests/53)
+        </script>
+      </zero-md>
+    </div>
+  </body>
+</html>
